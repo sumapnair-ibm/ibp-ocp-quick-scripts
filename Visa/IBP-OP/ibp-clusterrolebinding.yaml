@@ -1,0 +1,12 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: visa-demo
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: visa-demo
+roleRef:
+  kind: ClusterRole
+  name: visa-demo
+  apiGroup: rbac.authorization.k8s.io

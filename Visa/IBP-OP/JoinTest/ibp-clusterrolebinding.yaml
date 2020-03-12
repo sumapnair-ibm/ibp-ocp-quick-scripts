@@ -1,0 +1,12 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: visa-ibp-join-demo
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: visa-ibp-join-demo
+roleRef:
+  kind: ClusterRole
+  name: visa-ibp-join-demo
+  apiGroup: rbac.authorization.k8s.io

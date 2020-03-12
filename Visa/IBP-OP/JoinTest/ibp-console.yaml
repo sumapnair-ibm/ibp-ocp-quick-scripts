@@ -1,0 +1,17 @@
+apiVersion: ibp.com/v1alpha1
+kind: IBPConsole
+metadata:
+  name: ibpconsole
+spec:
+  license: accept
+  serviceAccountName: default
+  email: "sumapnair@us.ibm.com"
+  password: "password"
+  registryURL: ip-ibp-images-team-docker-remote.artifactory.swg-devops.com/cp
+  imagePullSecret: docker-key-secret
+  networkinfo:
+    domain: pocaustintx-1579052793275-f72ef11f3ab089a8c677044eb28292cd-0001.us-east.containers.appdomain.cloud
+  storage:
+    console:
+      class: default
+      size: 10Gi

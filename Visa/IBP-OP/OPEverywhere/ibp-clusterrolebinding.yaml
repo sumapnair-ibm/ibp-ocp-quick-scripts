@@ -1,0 +1,12 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: sumapnair-us
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: sumapnair-us
+roleRef:
+  kind: ClusterRole
+  name: sumapnair-us
+  apiGroup: rbac.authorization.k8s.io
